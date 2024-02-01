@@ -1,0 +1,323 @@
+
+/*A HÁTTÉRSZÍN BEÁLLÍTÁSA*/
+
+body
+{
+    background-color: #fb9403;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+/*A HONLAP LOGÓJÁNAK MÉRETE*/
+
+.logo
+{
+    width: 26vw;
+    height: 7.8vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*A KÖZÉPRE IGAZÍTÁS OSZTÁLYA*/
+
+.center
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 7vw;
+}
+
+/*NAVIGÁCIÓS MENÜ SZÖVEGEINEK KÖZÉPRE IGAZÍTÁSA*/
+
+.szovegcenter
+{
+    text-align: center;
+}
+
+/*A SAKKTÁBLA MINTÁZAT KIALAKÍTÁSA, EZ IGEN ÖSSZETETT*/
+/*KOCKÁK ALAPÉRTELMEZETT MÉRETE*/
+
+:root
+{
+    --square-size: 0.833vw;
+}
+
+/*A VÍZSZINTES SAKKTÁBLA LÉTREHOZÁSA*/
+
+.sakktabla
+{
+    width: 100vw;
+    height: var(--square-size);
+    background-image: linear-gradient(to right, white 0.8vw, black 0.8vw);
+    background-size: calc(var(--square-size) * 2) var(--square-size);
+}
+
+/*A FÜGGŐLEGES SAKKTÁBLA LÉTREHOZÁSA*/
+
+.fuggolegessakktabla
+{
+    width: var(--square-size);
+    height: 100vh;
+    background-image: linear-gradient(to bottom, black 0.8vw, white 0.8vw);
+    background-size: var(--square-size) calc(var(--square-size) * 2);
+    position: fixed;
+}
+
+/*A MÁSODIK FÜGGŐLEGES SAKKTÁBLA LÉTREHOZÁSA*/
+
+.masikfuggolegessakktabla
+{
+    width: var(--square-size);
+    height: 100vh;
+    background-image: linear-gradient(to bottom, black 0.8vw, white 0.8vw);
+    background-size: var(--square-size) calc(var(--square-size) * 2);
+    position: fixed;
+    margin-left: calc(var(--square-size) * 18);
+}
+
+/*A KÉT FÜGGŐLEGES SAKKTÁBLA KÖZÖTTI DOBOZRÉSZ LÉTREHOZÁSA*/
+
+.nemsakktabla
+{
+    position: fixed;
+    left: var(--square-size);
+    width: calc(var(--square-size) * 17);
+    height: 100vh;
+    z-index: -1;
+}
+
+.ezsemsakktabla
+{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    left: calc(var(--square-size) * 19);
+    right: 0;
+    z-index: -1;
+}
+
+/*A KÖZÉPSŐ DOBOZBAN LEVŐ SZÖVEGEK KÖZÉPRE IGAZÍTÁSA*/
+
+.tartalom
+{
+    text-align: center;
+}
+
+/*CÍMSOR TULAJDONSÁGOK*/
+
+h1
+{
+    font-size: 2.166vw;
+    margin-top: 0.75vw;
+    margin-bottom: 1vw;
+}
+
+/*SZÖVEGEK TULAJDONSÁGAI*/
+
+p
+{
+    font-size: 1.361vw;
+    margin-bottom: 0.25vw;
+}
+
+/*SZÖVEGEK, ÉS CÍMSOROK SZÍNE*/
+
+p, h1
+{
+    color: rgb(0, 107, 0);
+    font-style: italic;
+    font-weight: bold;
+}
+
+/*A LINKEK TULAJDONSÁGAI*/
+
+a
+{
+    font-size: 1.485vw;
+    color: black;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/*PIROS SZÍN BEÁLLÍTÁSA*/
+
+.piros
+{
+    color: red;
+    text-shadow: 0.05vh 0.05vh rgb(0, 0, 0);
+}
+
+/*FRADI SZÍN BEÁLLÍTÁSA*/
+
+.fradi
+{
+    color: #009036;
+    margin-bottom: 0.25vw;
+}
+
+/*KÉK SZÍN BEÁLLÍTÁSA*/
+
+.kek
+{
+    color: blue;
+    margin-bottom: 0.25vw;
+}
+
+/*A TAXIMASTERS MÁRKANÉV KIEMELÉSE*/
+
+span
+{
+    color: black;
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*SORTÖRÉS, MERT A BR EZEN A HONLAPON NEM JÓ*/
+
+.sortores
+{
+    margin-bottom: 2.5vw;
+}
+
+/*ALÁHÚZÁS ELTÁVOLÍTÁSA A LINKBŐL*/
+
+a:link, a:visited, a:hover, a:active
+{
+    text-decoration: none;
+}
+
+/*TELEFON PROTOKOL LINKEK*/
+
+.zoldlink
+{
+    color: rgb(0, 107, 0);
+    font-size: 1.361vw;
+    margin-bottom: 0.25vw;
+    font-style: italic;
+}
+
+/*ZENE LINKEK*/
+
+.keklink
+{
+    color: blue;
+    font-size: 1.485vw;
+    margin-bottom: 0.25vw;
+    font-weight: bold;
+}
+
+/*LINKRE MUTATÁSKOR A SZÖVEG SZÍNE MINDIG ZÖLD LESZ*/
+
+a:hover
+{
+    color: green;
+}
+
+/*ANIMÁCIÓ*/
+
+a:hover, .stunts, .stuntslink
+{
+    animation: alternate-border 0.3s alternate infinite;
+    border: 0.1vh solid;
+}
+
+/*A STUNTS LINKEK NAGYOBBRA ÁLLÍTÁSA*/
+
+.stuntslink
+{
+    font-size: 2vw;
+}
+
+/*LENTEBB KEZDŐDŐ KÉPEK*/
+
+.lentebb
+{
+    margin-top: 4vh;
+}
+
+/*SZÍNVÁLTÓS ANIMÁCIÓ LÉTREHOZÁSA STUNTS STÍLUSBAN*/
+
+@keyframes alternate-border
+{
+    0%
+    {
+      border-color: #ffff55;
+    }
+    49.9%
+    {
+        border-color: #ffff55;
+    }
+    50%
+    {
+        border-color: #aa00aa;
+    }
+    100%
+    {
+      border-color: #aa00aa;
+    }
+}
+
+/*TELEFON PROTOKOL LINKRE MUTATÓ EGÉRKURZOR*/
+
+.zoldlink:hover
+{
+    color: rgb(0, 107, 0)
+}
+
+/*ZENE LINKRE MUTATÓ EGÉRKURZOR*/
+
+.keklink:hover
+{
+    color: blue;
+    font-weight: bold;
+}
+
+/*STUNTS LETÖLTÉSI LINK HOVER SZÍNÉNEK BEÁLLÍTÁSA*/
+
+.stuntslink:hover
+{
+    color: black;
+}
+
+/*KÉPEK TULAJDONSÁGAINAK BEÁLLÍTÁSA*/
+
+img
+{
+    width: 50vw;
+    height: 13vw;
+}
+
+/*A NAGYOBB TAXIMASTERS LOGÓ TULAJDONSÁGAINAK BEÁLLÍTÁSA*/
+
+.taxikep
+{
+    width: 50vw;
+    height: 15vw;
+}
+
+/*A CSÚSZKA ELTŰNTETÉSE CHROMIUM ALAPÚ BÖNGÉSZŐKÖN*/
+
+::-webkit-scrollbar
+{
+    display: none;
+}
+
+/*BEÁGYAZOTT LAPOK MÉRETÉNEK BEÁLLÍTÁSA*/
+
+iframe
+{
+    width: 100vw;
+    height: calc(100vh - 8.6vw);
+    align-items: center;
+}
+
+/*FEJLETTEBB RESZPONZIVÍTÁS HOZZÁRENDELÉSE A HONLAPHOZ*/
+
+@media screen and (max-width: 376px)
+{
+    iframe
+    {
+        width: 84.1vw;
+    }
+}
